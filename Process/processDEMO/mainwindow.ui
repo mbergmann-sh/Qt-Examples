@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>431</width>
+    <height>344</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Process Tester</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="1">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Compiler:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QComboBox" name="comboBoxCompiler">
+      <item>
+       <property name="text">
+        <string>vc</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>gcc</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Policy::Expanding</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>73</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="4">
+     <widget class="QPushButton" name="btnRun">
+      <property name="toolTip">
+       <string>This will start a QProcess and compile from there!</string>
+      </property>
+      <property name="statusTip">
+       <string>Run Compiler...</string>
+      </property>
+      <property name="text">
+       <string>&amp;Run Compiler!</string>
+      </property>
+      <property name="shortcut">
+       <string>Shift+R</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="5">
+     <widget class="QTextBrowser" name="output"/>
+    </item>
+    <item row="2" column="0" colspan="5">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Path to vc:</string>
+        </property>
+        <property name="buddy">
+         <cstring>leVCpath</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="leVCpath"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="btnGetVC">
+        <property name="maximumSize">
+         <size>
+          <width>41</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Get</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Path to gcc:</string>
+        </property>
+        <property name="buddy">
+         <cstring>leGCCpath</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="leGCCpath"/>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="btnGetGCC">
+        <property name="maximumSize">
+         <size>
+          <width>41</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Get</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>File to compile:</string>
+        </property>
+        <property name="buddy">
+         <cstring>leGCCpath</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="leFilepath"/>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="btnGetFile">
+        <property name="maximumSize">
+         <size>
+          <width>41</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Get</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="btnSavePrefs">
+      <property name="toolTip">
+       <string>Prefs will be saved in your /home directory!</string>
+      </property>
+      <property name="statusTip">
+       <string>Save Prefs...</string>
+      </property>
+      <property name="text">
+       <string>&amp;Save Prefs</string>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+S</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>431</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuProject">
+    <property name="title">
+     <string>Project</string>
+    </property>
+    <addaction name="actionRun_Compiler"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout"/>
+    <addaction name="actionAbout_Qt"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave_Prefs"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuProject"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionRun_Compiler">
+   <property name="text">
+    <string>Run Compiler...</string>
+   </property>
+   <property name="statusTip">
+    <string>Run Compiler!</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About...</string>
+   </property>
+   <property name="statusTip">
+    <string>Show information about this App...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="actionAbout_Qt">
+   <property name="text">
+    <string>About Qt...</string>
+   </property>
+   <property name="statusTip">
+    <string>Show information about Qt...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+H</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="statusTip">
+    <string>Quit this app...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionSave_Prefs">
+   <property name="text">
+    <string>Save Prefs...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>215</x>
+     <y>171</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
