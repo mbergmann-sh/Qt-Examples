@@ -1,5 +1,7 @@
 # Qt-Examples
 
+<img width="1815" height="1155" alt="Image" src="https://github.com/user-attachments/assets/a2eb6639-b585-48cb-ba0b-e693ee5ce023" />
+
 Being sick of inventing the wheel for th 365. time when coding with Qt, I started this Repo as a place to keep things together.
 This repo contains different examples on how to solve things with Qt.
 
@@ -18,4 +20,4 @@ make
 
 
 If you are a Qt-Creator user, you might simply load a correspondending .pro file into the IDE and configure it for building.
-<img width="1815" height="1155" alt="Image" src="https://github.com/user-attachments/assets/a2eb6639-b585-48cb-ba0b-e693ee5ce023" />
+
