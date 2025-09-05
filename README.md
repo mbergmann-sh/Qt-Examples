@@ -8,6 +8,7 @@ This repo contains different examples on how to solve things with Qt.
 In order to use the code, you should have installed Qt by Trolltech. While most of the examples compile fine using Qt5, I strongly recomment you to use a recent, stable Qt6 release.
 
 If you have any suggestions about solving an example in a better way, please let me know!
+
 You might downlod and build the repo's examples by using 
 
 git clone https://github.com/mbergmann-sh/Qt-Examples.git
